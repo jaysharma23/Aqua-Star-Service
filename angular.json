@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Jay-Sharma-Portfolio": {
+    "Aqua-Star-Service": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/jay-sharma-portfolio",
+            "outputPath": "dist/Aqua-Star-Service",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,9 +28,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [ "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./node_modules/particles.js/demo/js/app.js",
+              "./node_modules/particles.js/particles.js"
+
+            ]
           },
           "configurations": {
             "production": {
@@ -69,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Jay-Sharma-Portfolio:build:production"
+              "browserTarget": "Aqua-Star-Service:build:production"
             },
             "development": {
-              "browserTarget": "Jay-Sharma-Portfolio:build:development"
+              "browserTarget": "Aqua-Star-Service:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Jay-Sharma-Portfolio:build"
+            "browserTarget": "Aqua-Star-Service:build"
           }
         },
         "test": {
